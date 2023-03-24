@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Basic Front-End JavaScript Application</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="main.js"></script>
+  </head>
+
+  <body onload="getItems()" class="container">
+    <h1 id="title" class="title">Hello World!</h1>
+    <br>
+    <label for="name" class="label-name">items:</label>
+    <input type="text" id="search-bar" onkeyup="showSuggestions()" class="search-bar">
+    <div id="suggestions-container">
+      <div id="suggestions"></div>
+    </div>
+    <br>
+  </body>
+
+</html>
