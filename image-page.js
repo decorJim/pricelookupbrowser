@@ -1,15 +1,78 @@
+function showImages(div,images) {
+    div.innerHTML="";
+    for(let i=0;i<images.length;i++) {
+        const imageTag = document.createElement("img");
+        imageTag.src=images[i].src;
+        div.appendChild(imageTag);
+    }
+}
+
+var selectedImages=[]
+function eventListeners() {
+    const input=document.getElementById("myInputsingle");
+    const selectedImagesDiv = document.getElementById("selectedImages");
+
+    input.addEventListener('change',(event)=>{
+        const file=event.target.files[0];
+
+        if(file && file.type.startsWith('image/')) {
+            const fileReader=new FileReader();
+            fileReader.addEventListener('load',()=>{
+                const image=new Image();
+                image.src=fileReader.result;
+                this.selectedImages.push(image)
+                showImages(selectedImagesDiv,this.selectedImages);
+                console.log(this.selectedImages);
+            })
+            fileReader.readAsDataURL(file);
+        }
+    });
+}
+
+var counter=0;
+
+function handleImage() {
+    const selectedImagesDiv = document.getElementById("selectedImages");
+    const images = document.getElementById("myInputsingle").files;
+
+    const formData=new FormData();
+
+    const input = document.getElementById('myInputsingle');
+
+    const file=input.files[0];
+
+    counter++;
+
+    const promise=new Promise((resolve,reject)=>{
+        const fileReader=new FileReader();
+        fileReader.onload=()=>{
+            const result=fileReader.result;
+            formData.append("index",this.counter);
+            formData.append("image",result);
+            resolve()
+        }
+        fileReader.readAsDataURL(file);
+    });
+
+    promise.then(()=>{
+        console.log("hete")
+        for(const [key,value] of formData.entries()) {
+            console.log(key,value.substring(0,30));
+        }
+    })
+    .catch(error=>{
+        console.log(error)
+    })
+
+}
+
 
 
 function handleImages() {
     const selectedImagesDiv = document.getElementById("selectedImages");
     const images = document.getElementById("myInput").files;
-    for (let i = 0; i < images.length; i++) {
-        const image = images[i];
-        const imageURL = URL.createObjectURL(image);
-        const imageTag = document.createElement("img");
-        imageTag.src = imageURL;
-        selectedImagesDiv.appendChild(imageTag);
-    }
+    
+    showImages(selectedImagesDiv,images);
 
     // Create a new FormData object
     const formData = new FormData();
@@ -17,6 +80,7 @@ function handleImages() {
     // Add the file(s) to the FormData object
     const input = document.getElementById('myInput');
     const promises=[];
+
     for (let i = 0; i < input.files.length; i++) {
        const file=input.files[i];
        
@@ -38,7 +102,9 @@ function handleImages() {
     }
 
     Promise.all(promises).then(()=>{
-        console.log(formData);
+        for(const [key,value] of formData.entries()){
+            console.log(key,value);
+        }
 
         fetch('http://localhost:8080/image',{
             method:'POST',

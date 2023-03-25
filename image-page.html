@@ -5,7 +5,7 @@
         <link rel="stylesheet" type="text/css" href="image-page.css">
         <script src="image-page.js"></script>
     </head>
-    <body>
+    <body onload="eventListeners()">
         <br>
         <br>
         <br>
@@ -14,7 +14,9 @@
         <div class="container">
             <button onclick="gomainpage()" class="back">Back</button>
             <input type="file" id="myInput" multiple>
-            <button onclick="handleImages()" class="submit">Submit</button>
+            <button onclick="handleImage()" class="submit">Submit</button>
+            <br>
+            <input type="file" id="myInputsingle" accept="image/*" multiple="false">
             <br>
             <div id="selectedImages" class="selected-images"></div>
         </div>
