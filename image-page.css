@@ -29,7 +29,6 @@ input[type="file"] {
     height: 800px;
     width: 525px;
     overflow-y: scroll;
-    background-color: red;
 }
   
 .selected-images img {
