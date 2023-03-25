@@ -1,0 +1,51 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-button {
+    font-size: 50px;
+    width: 300px;
+    height: 70px;
+    margin: 5px;
+}
+
+.detail-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.id {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.name {
+    font-size: 50px;
+}
+
+.price {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.taxe {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.category {
+    font-size: 50px;
+}
+
+.num {
+    font-size: 50px;
+}
+
+.product {
+    font-size: 50px;
+}

@@ -48,3 +48,7 @@ function showSuggestions() {
           }
     }
 }
+
+function secretPage() {
+    window.location.href = 'image-page.html';
+}

@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+  
+input[type="file"] {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.back {
+    font-size: 30px;
+}
+
+.submit {
+    font-size: 30px;
+}
+
+.selected-images {
+    height: 800px;
+    width: 525px;
+    overflow-y: scroll;
+    background-color: red;
+}
+  
+.selected-images img {
+    max-width: 100%;
+    max-height: 100%;
+  }
