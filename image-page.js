@@ -11,10 +11,10 @@ function showImages(div, images) {
       deleteButton.innerHTML = "X";
       deleteButton.style.fontSize = "25px";
       deleteButton.addEventListener("click", () => {
-        const index = parseInt(deleteButton.dataset.index);
-        if (!isNaN(index)) {
+        const index = Array.from(div.children).indexOf(event.currentTarget.parentNode);
+        if (index !== -1) {
           selectedImages.splice(index, 1);
-          input.value="";
+          input.value = "";
           showImages(div, selectedImages);
         }
       });
