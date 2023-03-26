@@ -1,68 +1,65 @@
-function showImages(div,images) {
-    div.innerHTML="";
-    for(let i=0;i<images.length;i++) {
-        const imageTag = document.createElement("img");
-        imageTag.src=images[i].src;
-        div.appendChild(imageTag);
-    }
-}
-
-var selectedImages=[]
-function eventListeners() {
-    const input=document.getElementById("myInputsingle");
-    const selectedImagesDiv = document.getElementById("selectedImages");
-
-    input.addEventListener('change',(event)=>{
-        const file=event.target.files[0];
-
-        if(file && file.type.startsWith('image/')) {
-            const fileReader=new FileReader();
-            fileReader.addEventListener('load',()=>{
-                const image=new Image();
-                image.src=fileReader.result;
-                this.selectedImages.push(image)
-                showImages(selectedImagesDiv,this.selectedImages);
-                console.log(this.selectedImages);
-            })
-            fileReader.readAsDataURL(file);
+function showImages(div, images) {
+    var input = document.getElementById("myInputsingle");
+    div.innerHTML = "";
+    for (let i = 0; i < images.length; i++) {
+      // creates image element
+      var imageTag = document.createElement("img");
+      imageTag.src = images[i].src;
+    
+      // creates delete button
+      var deleteButton = document.createElement("button");
+      deleteButton.innerHTML = "X";
+      deleteButton.style.fontSize = "25px";
+      deleteButton.addEventListener("click", () => {
+        const index = parseInt(deleteButton.dataset.index);
+        if (!isNaN(index)) {
+          selectedImages.splice(index, 1);
+          input.value="";
+          showImages(div, selectedImages);
         }
+      });
+      deleteButton.dataset.index = i;
+    
+      var containerDiv = document.createElement("div");
+      containerDiv.appendChild(imageTag);
+      containerDiv.appendChild(deleteButton);
+    
+      div.appendChild(containerDiv);
+    }
+  }
+  
+  var selectedImages = [];
+
+  function eventListeners() {
+    var input = document.getElementById("myInputsingle");
+    var selectedImagesDiv = document.getElementById("selectedImages");
+    
+    input.addEventListener("change", (event) => {
+      console.log(event.type)
+      const file = event.target.files[0];
+    
+      if (file && file.type.startsWith("image/")) {
+        const fileReader = new FileReader();
+        fileReader.addEventListener("load", () => {
+          const image = new Image();
+          image.src = fileReader.result;
+          selectedImages.push(image);
+          input.value="";
+          showImages(selectedImagesDiv, selectedImages);
+          console.log(selectedImages);
+        });
+        fileReader.readAsDataURL(file);
+      }
     });
-}
+  }
+  
+  
+
 
 var counter=0;
 
 function handleImage() {
-    const selectedImagesDiv = document.getElementById("selectedImages");
-    const images = document.getElementById("myInputsingle").files;
-
-    const formData=new FormData();
-
-    const input = document.getElementById('myInputsingle');
-
-    const file=input.files[0];
-
-    counter++;
-
-    const promise=new Promise((resolve,reject)=>{
-        const fileReader=new FileReader();
-        fileReader.onload=()=>{
-            const result=fileReader.result;
-            formData.append("index",this.counter);
-            formData.append("image",result);
-            resolve()
-        }
-        fileReader.readAsDataURL(file);
-    });
-
-    promise.then(()=>{
-        console.log("hete")
-        for(const [key,value] of formData.entries()) {
-            console.log(key,value.substring(0,30));
-        }
-    })
-    .catch(error=>{
-        console.log(error)
-    })
+    
 
 }
 
