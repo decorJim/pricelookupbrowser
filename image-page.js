@@ -1,3 +1,5 @@
+const baseURL="http://localhost:8080/";
+
 function showImages(div, images) {
     var input = document.getElementById("myInputsingle");
     div.innerHTML = "";
@@ -51,16 +53,31 @@ function showImages(div, images) {
         fileReader.readAsDataURL(file);
       }
     });
-  }
+}
   
-  
 
 
-var counter=0;
+async function handleImage() {
 
-function handleImage() {
-    
+    for(let i=0;i<selectedImages.length;i++) {
+       const startTime=Date.now()
+       const formData=new FormData();
+       formData.append("image",selectedImages[i].src);
+       formData.append("index",i);
 
+       fetch(baseURL.concat("image"),{
+          method:"POST",
+          body:formData
+       })
+       .then(response=>response.text())
+       .then(data=> {
+          console.log(data);
+          delay=Date.now()-startTime;
+          console.log(delay);
+       })
+       .catch(error=>console.error(error));
+       await new Promise(resolve => setTimeout(resolve, 80));
+    }
 }
 
 
