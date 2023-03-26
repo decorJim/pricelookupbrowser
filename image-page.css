@@ -19,10 +19,15 @@ input[type="file"] {
 
 .back {
     font-size: 30px;
+    height: 50px;
+    width: 200px;
+    font-weight: bold;
 }
 
 .submit {
     font-size: 30px;
+    height: 50px;
+    width: 200px;
 }
 
 .selected-images {
