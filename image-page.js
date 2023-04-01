@@ -71,9 +71,15 @@ async function handleImage() {
           method:"POST",
           body:formData
        })
-       .then(response=>response.text())
+       .then(response=>response.json())
        .then(data=> {
-          console.log(data);
+          console.log(data)
+          console.log("type",typeof(data.msg));
+          let num=Number(data.msg);
+          console.log(num);
+          if(num===selectedImages.length-1) {
+            alert("all images processed !");
+          }
           delay=Date.now()-startTime;
           console.log(delay);
        })
@@ -137,6 +143,23 @@ function createDownloadButton(imagesResults) {
       });
   }
   container.appendChild(button);
+}
+
+async function deleteImages() {
+  try {
+    const response = await fetch(baseURL.concat("delete"), {
+      method: "POST",
+    });
+    const data = await response.json();
+    console.log(data.msg);
+    var input = document.getElementById("myInputsingle");
+    var selectedImagesDiv = document.getElementById("selectedImages");
+    input.value="";
+    selectedImagesDiv.innerHTML="";
+    selectedImages=[];
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 function gomainpage() {
