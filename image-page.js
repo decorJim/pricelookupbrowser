@@ -1,4 +1,7 @@
+const JSZip = require("jszip");
+
 const baseURL="http://localhost:8080/";
+var selectedImages = [];
 
 function showImages(div, images) {
     var input = document.getElementById("myInputsingle");
@@ -28,11 +31,9 @@ function showImages(div, images) {
     
       div.appendChild(containerDiv);
     }
-  }
+}
   
-  var selectedImages = [];
-
-  function eventListeners() {
+function eventListeners() {
     var input = document.getElementById("myInputsingle");
     var selectedImagesDiv = document.getElementById("selectedImages");
     
@@ -55,8 +56,6 @@ function showImages(div, images) {
     });
 }
   
-
-
 async function handleImage() {
 
     for(let i=0;i<selectedImages.length;i++) {
@@ -64,6 +63,7 @@ async function handleImage() {
        const formData=new FormData();
        formData.append("image",selectedImages[i].src);
        formData.append("index",i);
+       formData.append("limit",selectedImages.length);
 
        fetch(baseURL.concat("image"),{
           method:"POST",
@@ -80,6 +80,63 @@ async function handleImage() {
     }
 }
 
-function gomainpage() {
-    window.location.href = 'main.html';
+
+function getImages() {
+  let imagesResults=[]
+  fetch(baseURL.concat("results"))
+  .then(response => response.json())
+  .then(images => {
+    images.forEach(imageData => {
+      const img = new Image();
+      img.src = atob(imageData);
+      imagesResults.push(img);
+    })
+    console.log(imagesResults);
+    createDownloadButton(imagesResults);
+  })
+  .catch(error => {
+    console.error('Error fetching images:', error);
+  });
 }
+
+function createDownloadButton(imagesResults) {
+  const container = document.getElementById("container");
+  const button = document.createElement('button');
+
+  button.innerHTML = "Download";
+  button.style.display = "block"
+  button.style.width = "200px";
+  button.style.height = "50px";
+  button.style.fontSize = "30px";
+
+  button.onclick = function () {
+    const zip = new JSZip();
+    for (let i = 0; i < imagesResults.length; i++) {
+      const img = imagesResults[i];
+      const canvas = document.createElement('canvas');
+      const ctx = canvas.getContext('2d');
+      canvas.width = img.width;
+      canvas.height = img.height;
+      ctx.drawImage(img, 0, 0);
+      const dataURL = canvas.toDataURL('image/png');
+      const base64Data = dataURL.split(',')[1];
+      zip.file(`image_${i+1}.png`, base64Data, {base64: true});
+    }
+    zip.generateAsync({type:"blob"})
+      .then(function(content) {
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(content);
+        link.download = "images.zip";
+        link.style.display = 'none';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      });
+  }
+  container.appendChild(button);
+}
+
+function gomainpage() {
+  window.location.href = 'index.html';
+}
+

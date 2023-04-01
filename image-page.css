@@ -39,4 +39,10 @@ input[type="file"] {
 .selected-images img {
     max-width: 100%;
     max-height: 100%;
-  }
+}
+
+.get-images {
+    font-size: 30px;
+    height: 50px;
+    width: 200px;
+}

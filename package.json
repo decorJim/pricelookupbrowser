@@ -1,0 +1,17 @@
+{
+  "name": "pricelookupbrowser",
+  "version": "1.0.0",
+  "description": "browser app for iphone X in safari",
+  "main": "index.js",
+  "cacheControl": "no-cache",
+  "scripts": {
+    "start": "http-server -c-1",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jim",
+  "license": "ISC",
+  "dependencies": {
+    "jszip": "^3.10.1",
+    "requirejs": "^2.3.6"
+  }
+}
