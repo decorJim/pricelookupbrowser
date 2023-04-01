@@ -104,7 +104,6 @@ function getImages() {
 function createDownloadButton(imagesResults) {
   const container = document.getElementById("container");
   const button = document.createElement('button');
-
   button.innerHTML = "Download";
   button.style.display = "block"
   button.style.width = "200px";
