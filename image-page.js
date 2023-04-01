@@ -1,7 +1,31 @@
-const JSZip = require("jszip");
 
-const baseURL="http://localhost:8080/";
+
+var baseURL="http://localhost:8080/";
+
 var selectedImages = [];
+
+function eventListeners() {
+  var input = document.getElementById("myInputsingle");
+  var selectedImagesDiv = document.getElementById("selectedImages");
+  
+  input.addEventListener("change", (event) => {
+    console.log(event.type)
+    const file = event.target.files[0];
+  
+    if (file && file.type.startsWith("image/")) {
+      const fileReader = new FileReader();
+      fileReader.addEventListener("load", () => {
+        const image = new Image();
+        image.src = fileReader.result;
+        selectedImages.push(image);
+        input.value="";
+        showImages(selectedImagesDiv, selectedImages);
+        console.log(selectedImages);
+      });
+      fileReader.readAsDataURL(file);
+    }
+  });
+}
 
 function showImages(div, images) {
     var input = document.getElementById("myInputsingle");
@@ -33,28 +57,6 @@ function showImages(div, images) {
     }
 }
   
-function eventListeners() {
-    var input = document.getElementById("myInputsingle");
-    var selectedImagesDiv = document.getElementById("selectedImages");
-    
-    input.addEventListener("change", (event) => {
-      console.log(event.type)
-      const file = event.target.files[0];
-    
-      if (file && file.type.startsWith("image/")) {
-        const fileReader = new FileReader();
-        fileReader.addEventListener("load", () => {
-          const image = new Image();
-          image.src = fileReader.result;
-          selectedImages.push(image);
-          input.value="";
-          showImages(selectedImagesDiv, selectedImages);
-          console.log(selectedImages);
-        });
-        fileReader.readAsDataURL(file);
-      }
-    });
-}
   
 async function handleImage() {
 
