@@ -50,6 +50,7 @@ function showSuggestions() {
 }
 
 function secretPage() {
+    console.log("here we go")
     window.location.href = 'image-page.html';
 }
 

@@ -5,13 +5,14 @@
   "main": "index.js",
   "cacheControl": "no-cache",
   "scripts": {
-    "start": "http-server -c-1",
+    "start": "npx http-server -a localhost -p 3000 -c-1 -o -s /index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "jim",
   "license": "ISC",
   "dependencies": {
     "jszip": "^3.10.1",
+    "parcel": "^2.8.3",
     "requirejs": "^2.3.6"
   }
 }
