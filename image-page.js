@@ -90,10 +90,12 @@ function getImages() {
   .then(images => {
     images.forEach(imageData => {
       const img = new Image();
-      img.src = atob(imageData);
+      img.src = `data:image/jpeg;base64,${imageData}`;
       imagesResults.push(img);
     })
     console.log(imagesResults);
+    var selectedImagesDiv = document.getElementById("selectedImages");
+    showImages(selectedImagesDiv,imagesResults);
     createDownloadButton(imagesResults);
   })
   .catch(error => {
