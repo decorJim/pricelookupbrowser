@@ -1,6 +1,6 @@
 
 
-var baseURL="http://localhost:8080/";
+var baseURL="http://52.60.42.240/";
 
 var selectedImages = [];
 

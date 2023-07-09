@@ -1,6 +1,6 @@
 var array=[];
 
-const baseURL="http://localhost:8080/";
+const baseURL="http://52.60.42.240/";
 
 function getArray() {
     return fetch(baseURL.concat('data'))
