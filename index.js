@@ -1,8 +1,9 @@
 var array=[];
 
-const baseURL="http://52.60.42.240/";
+const baseURL="http://www.dep16pricelookupbrowser.net/";
 
 function getArray() {
+    console.log(baseURL.concat('data'));
     return fetch(baseURL.concat('data'))
     .then(response => response.json())
     .then(data => {

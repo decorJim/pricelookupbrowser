@@ -1,6 +1,6 @@
 
 
-var baseURL="http://52.60.42.240/";
+var baseURL="http://www.dep16pricelookupbrowser.net/";
 
 var selectedImages = [];
 
