@@ -23,6 +23,7 @@ browser app for iphone X in safari
 - create account on cloudflare
 - add website domain name abc.com
 - in the dns section www.abc.com and abc.com as A with associated IP
+- in the dns section also add aws certificate CNAME and its value
 - go back to aws routing 53 in section registered domain
 - delete all 4 aws random link and put in the 2 cloudflare nameservers
 - come back to cloudflare and complete the quick guide in overview
