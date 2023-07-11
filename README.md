@@ -26,7 +26,7 @@ browser app for iphone X in safari
 - in the dns section also add aws certificate CNAME and its value
 - go back to aws routing 53 in section registered domain
 - delete all 4 aws random link and put in the 2 cloudflare nameservers
-- come back to cloudflare and complete the quick guide in overview
+- come back to cloudflare and complete the quick start guide in overview
 
 
 # BE CAREFUL MY INSTANCE LOCATION AND THE DOMAIN AND CERTIFICATE ARE NOT THE SAME
