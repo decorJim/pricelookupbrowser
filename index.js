@@ -3,6 +3,7 @@ var array=[];
 const baseURL="https://dep16pricelookupserv.net/";
 
 function getArray() {
+    /*
     return fetch(baseURL.concat('data'))
     .then(response => response.json())
     .then(data => {
@@ -12,6 +13,12 @@ function getArray() {
         });
     })
     .catch(error => console.error(error));
+    */
+   return fetch('temp.json').then(response=>response.json()).then(data=>{
+     data.forEach(element=>{
+        array.push(element);
+     })
+   })
 }
 
 function getItems() {
