@@ -1,6 +1,6 @@
 var array=[];
 
-const baseURL="https://www.dep16pricelookupserv.net/";
+const baseURL="http://www.dep16pricelookupserv.net/";
 
 function getArray() {
     return fetch(baseURL.concat('data'))

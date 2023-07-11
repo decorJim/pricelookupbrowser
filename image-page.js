@@ -1,6 +1,6 @@
 
 
-var baseURL="https://www.dep16pricelookupserv.net/";
+var baseURL="http://www.dep16pricelookupserv.net/";
 
 var selectedImages = [];
 
