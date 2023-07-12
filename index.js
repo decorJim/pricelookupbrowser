@@ -3,7 +3,7 @@ var array=[];
 const baseURL="https://www.dep16pricelookupserv.net/";
 
 function getArray() {
-    return fetch(baseURL.concat('data'))
+    return fetch(baseURL.concat('data'),{ mode: 'no-cors' })
     .then(response => response.json())
     .then(data => {
         console.log(data);

@@ -69,7 +69,8 @@ async function handleImage() {
 
        fetch(baseURL.concat("image"),{
           method:"POST",
-          body:formData
+          body:formData,
+          mode: 'no-cors'
        })
        .then(response=>response.json())
        .then(data=> {
@@ -91,7 +92,7 @@ async function handleImage() {
 
 function getImages() {
   let imagesResults=[]
-  fetch(baseURL.concat("results"))
+  fetch(baseURL.concat("results"), { mode: 'no-cors' })
   .then(response => response.json())
   .then(images => {
     images.forEach(imageData => {
@@ -149,6 +150,7 @@ async function deleteImages() {
   try {
     const response = await fetch(baseURL.concat("delete"), {
       method: "POST",
+      mode: 'no-cors'
     });
     const data = await response.json();
     console.log(data.msg);
