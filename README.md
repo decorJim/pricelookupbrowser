@@ -34,7 +34,9 @@ browser app for iphone X in safari
 # search in CANADA central for ec2 instance
 - https://www.youtube.com/watch?v=YVbwVet8aI4&ab_channel=GSoftKnowledge
 
-ns-1455.awsdns-53.org.
-ns-249.awsdns-31.com.
-ns-1824.awsdns-36.co.uk.
-ns-673.awsdns-20.net.
+- ns-1455.awsdns-53.org.
+- ns-249.awsdns-31.com.
+- ns-1824.awsdns-36.co.uk.
+- ns-673.awsdns-20.net.
+
+- cmd shift R to erase mac cache
