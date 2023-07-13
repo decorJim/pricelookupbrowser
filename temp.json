@@ -5,7 +5,7 @@
            "num":1,
            "category":"1 canette 16",
            "product":"beer",
-           "price":1.69,
+           "price":77,
            "taxe":true
     },
     {
@@ -14,7 +14,16 @@
            "num":1,
            "category":"1 canette 16",
            "product":"beer",
-           "price":1.69,
+           "price":77,
+           "taxe":true
+    },
+    {
+           "id":"1c busch 355ml",
+           "name":"busch ice 355ml",
+           "num":1,
+           "category":"1 canette 16",
+           "product":"beer",
+           "price":77,
            "taxe":true
     },
     {
@@ -23,7 +32,7 @@
            "num":1,
            "category":"1 canette 16",
            "product":"beer",
-           "price":1.69,
+           "price":77,
            "taxe":true
     },
     {
@@ -117,12 +126,12 @@
             "taxe":true
          },
          {
-            "id":"1c blue ribbon 455ml",
-            "name":"blue ribbon 455ml",
+            "id":"1c blue ribbon 473ml",
+            "name":"blue ribbon 473ml",
             "num":1,
             "category":"1 canette 18",
             "product":"beer",
-            "price":2.65,
+            "price":2.99,
             "taxe":true
          },
          {
@@ -131,7 +140,7 @@
             "num":1,
             "category":"1 canette 18",
             "product":"beer",
-            "price":3.49,
+            "price":3.69,
             "taxe":true
          },
          {
@@ -140,7 +149,7 @@
             "num":1,
             "category":"1 canette 18",
             "product":"beer",
-            "price":3.49,
+            "price":3.69,
             "taxe":true
          },
          {
@@ -185,7 +194,7 @@
             "num":1,
             "category":"1 canette 18",
             "product":"beer",
-            "price":3.89,
+            "price":4.49,
             "taxe":true
          },
          {
@@ -194,7 +203,7 @@
             "num":1,
             "category":"1 canette 18",
             "product":"beer",
-            "price":4.89,
+            "price":4.99,
             "taxe":true
          },
          {
@@ -212,7 +221,7 @@
             "num":1,
             "category":"1 canette 18",
             "product":"beer",
-            "price":3.25,
+            "price":3.99,
             "taxe":true
          },
          {
@@ -221,7 +230,7 @@
             "num":1,
             "category":"1 canette 18",
             "product":"beer",
-            "price":3.49,
+            "price":3.99,
             "taxe":true
          },
          {
@@ -239,7 +248,7 @@
             "num":1,
             "category":"1 canette 18",
             "product":"beer",
-            "price":4.19,
+            "price":81,
             "taxe":true
          },
          {
@@ -248,7 +257,7 @@
             "num":2,
             "category":"2 canette 18",
             "product":"beer",
-            "price":6.99,
+            "price":7.99,
             "taxe":true
          },
          {
@@ -257,7 +266,7 @@
             "num":1,
             "category":"1 canette 18",
             "product":"beer",
-            "price":4.59,
+            "price":83,
             "taxe":true
          },
          {
@@ -266,7 +275,7 @@
             "num":2,
             "category":"2 canette 18",
             "product":"beer",
-            "price":8.59,
+            "price":8.99,
             "taxe":true
          },
          {
@@ -287,15 +296,7 @@
             "price":7.99,
             "taxe":true
          },
-         {
-            "id":"1c heneiken 710ml",
-            "name":"heneiken 710ml",
-            "num":1,
-            "category":"1 canette 18",
-            "product":"beer",
-            "price":7.29,
-            "taxe":true
-         },
+        
          
          
          {
@@ -304,7 +305,7 @@
             "num":4,
             "category":"4 canette 18",
             "product":"beer",
-            "price":9.49,
+            "price":10.99,
             "taxe":true
          },
          {
@@ -340,7 +341,7 @@
             "num":4,
             "category":"4 canette 18",
             "product":"beer",
-            "price":10.99,
+            "price":14.49,
             "taxe":true
          },
          {
@@ -349,7 +350,7 @@
             "num":4,
             "category":"4 canette 18",
             "product":"beer",
-            "price":10.99,
+            "price":11.99,
             "taxe":true
          },
          {
@@ -358,7 +359,7 @@
             "num":4,
             "category":"4 canette 18",
             "product":"beer",
-            "price":10.99,
+            "price":11.99,
             "taxe":true
          },
          {
@@ -367,7 +368,7 @@
             "num":4,
             "category":"4 canette 18",
             "product":"beer",
-            "price":10.99,
+            "price":11.99,
             "taxe":true
          },
          {
@@ -394,7 +395,7 @@
             "num":4,
             "category":"4 canette 16",
             "product":"beer",
-            "price":10.99,
+            "price":14.49,
             "taxe":true
          },
          {
@@ -403,7 +404,7 @@
             "num":4,
             "category":"4 canette 18",
             "product":"beer",
-            "price":11.99,
+            "price":14.49,
             "taxe":true
          },
          {
@@ -412,7 +413,7 @@
             "num":4,
             "category":"4 canette 18",
             "product":"beer",
-            "price":9.99,
+            "price":11.99,
             "taxe":true
          },
          {
@@ -430,7 +431,7 @@
             "num":4,
             "category":"4 canette 18",
             "product":"beer",
-            "price":13.99,
+            "price":14.99,
             "taxe":true
          },
          {
@@ -440,6 +441,24 @@
             "category":"4 canette 18",
             "product":"beer",
             "price":14.99,
+            "taxe":true
+         },
+         {
+            "id":"4c la fin du monde unibroue 473ml",
+            "name":"la fin du monde unibroue 473ml",
+            "num":4,
+            "category":"4 canette 18",
+            "product":"beer",
+            "price":15.49,
+            "taxe":true
+         },
+         {
+            "id":"4c goose island ipa 473ml",
+            "name":"la fin du monde unibroue 473ml",
+            "num":4,
+            "category":"4 canette 18",
+            "product":"beer",
+            "price":14.49,
             "taxe":true
          },
          {
@@ -457,7 +476,7 @@
             "num":4,
             "category":"4 canette 18",
             "product":"beer",
-            "price":12.99,
+            "price":13.99,
             "taxe":true
          },
          {
@@ -486,7 +505,7 @@
             "num":12,
             "category":"12 canette 16",
             "product":"beer",
-            "price":16.99,
+            "price":79,
             "taxe":true
          },
          {
@@ -495,7 +514,7 @@
             "num":12,
             "category":"12 canette 16",
             "product":"beer",
-            "price":16.99,
+            "price":79,
             "taxe":true
          },
          {
@@ -504,7 +523,7 @@
             "num":12,
             "category":"12 canette 16",
             "product":"beer",
-            "price":16.99,
+            "price":79,
             "taxe":true
          },
          {
@@ -513,7 +532,7 @@
             "num":12,
             "category":"12 canette 16",
             "product":"beer",
-            "price":20.99,
+            "price":73,
             "taxe":true
          },
          {
@@ -522,7 +541,7 @@
             "num":12,
             "category":"12 canette 16",
             "product":"beer",
-            "price":20.99,
+            "price":73,
             "taxe":true
          },
          {
@@ -531,7 +550,7 @@
             "num":12,
             "category":"12 canette 16",
             "product":"beer",
-            "price":23.99,
+            "price":73,
             "taxe":true
          },
          {
@@ -540,7 +559,7 @@
             "num":12,
             "category":"12 canette 16",
             "product":"beer",
-            "price":22.99,
+            "price":23.99,
             "taxe":true
          },
          {
@@ -722,7 +741,7 @@
             "num":6,
             "category":"6 canette 16",
             "product":"beer",
-            "price":9.49,
+            "price":78,
             "taxe":true
          },
          {
@@ -731,7 +750,7 @@
             "num":6,
             "category":"6 canette 16",
             "product":"beer",
-            "price":9.49,
+            "price":78,
             "taxe":true
          },
          {
@@ -740,7 +759,7 @@
             "num":6,
             "category":"6 canette 16",
             "product":"beer",
-            "price":9.49,
+            "price":78,
             "taxe":true
          },
          {
@@ -749,7 +768,7 @@
             "num":6,
             "category":"6 canette 16",
             "product":"beer",
-            "price":9.99,
+            "price":78,
             "taxe":true
          },
          {
@@ -758,7 +777,7 @@
             "num":6,
             "category":"6 canette 16",
             "product":"beer",
-            "price":12.99,
+            "price":72,
             "taxe":true
          },
          {
@@ -776,7 +795,7 @@
             "num":6,
             "category":"6 canette 18",
             "product":"beer",
-            "price":74,
+            "price":75,
             "taxe":true
          },
          {
@@ -785,7 +804,7 @@
             "num":6,
             "category":"6 canette 18",
             "product":"beer",
-            "price":74,
+            "price":75,
             "taxe":true
          },
          {
@@ -794,7 +813,7 @@
             "num":6,
             "category":"6 canette 16",
             "product":"beer",
-            "price":11.99,
+            "price":72,
             "taxe":true
          },
          {
@@ -830,7 +849,7 @@
             "num":6,
             "category":"6 canette 16",
             "product":"beer",
-            "price":15.99,
+            "price":14.99,
             "taxe":true
          },
          {
@@ -848,7 +867,7 @@
             "num":6,
             "category":"6 canette 16",
             "product":"beer",
-            "price":12.99,
+            "price":13.99,
             "taxe":true
          },
          {
@@ -866,7 +885,7 @@
             "num":6,
             "category":"6 canette 16",
             "product":"beer",
-            "price":12.99,
+            "price":13.99,
             "taxe":true
          },
          {
@@ -884,7 +903,7 @@
             "num":6,
             "category":"6 canette 16",
             "product":"beer",
-            "price":12.99,
+            "price":72,
             "taxe":true
          },
          {
@@ -902,7 +921,7 @@
             "num":6,
             "category":"6 canette 16",
             "product":"beer",
-            "price":14.99,
+            "price":15.49,
             "taxe":true
          },
          {
@@ -911,7 +930,7 @@
             "num":6,
             "category":"6 canette 16",
             "product":"beer",
-            "price":12.99,
+            "price":15.49,
             "taxe":true
          },
          {
