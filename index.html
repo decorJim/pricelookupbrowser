@@ -11,11 +11,22 @@
     <h1 id="title" class="title" onclick="secretPage()">Welcome !</h1>
     <br>
     <label for="name" class="label-name">items:</label>
-    <input type="text" id="search-bar" onkeyup="showSuggestions()" class="search-bar">
+    <div class="search-bar-container">
+       <input type="text" id="search-bar" onkeyup="showSuggestions()" class="search-bar">
+       <button id="clear-button" class="clear-button" onclick="resetContent()">&#x2716;</button>
+    </div>
     <div id="suggestions-container">
       <div id="suggestions"></div>
     </div>
     <br>
+    <div class="number-shortcut-container">
+      <div class="number-shortcut-box" onclick="addNumber('1c')">1c</div>
+      <div class="number-shortcut-box" onclick="addNumber('2c')">2c</div>
+      <div class="number-shortcut-box" onclick="addNumber('4c')">4c</div>
+      <div class="number-shortcut-box" onclick="addNumber('6c')">6c</div>
+      <div class="number-shortcut-box" onclick="addNumber('12c')">12c</div>
+    </div>
+    
   </body>
 
 </html>

@@ -13,7 +13,22 @@
     font-size: 50px;
 }
 
+.search-bar-container {
+    position: relative;
+}
+
 .search-bar {
+    font-size: 50px;
+}
+
+.clear-button {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    cursor: pointer;
     font-size: 50px;
 }
 
@@ -32,10 +47,26 @@
 
 .suggestion-button {
     width: 525px;
-    height: 70px;
+    height: 80px;
     margin: 5px;
     font-size:43px;
-  }
+}
+
+.number-shortcut-container {
+    display: flex; /* Use flexbox for horizontal layout */
+}
   
+.number-shortcut-box {
+    width: 130px; /* Adjust width as per your requirements */
+    height: 130px; /* Adjust height as per your requirements */
+    background-color: lightblue; /* Just for illustration purposes */
+    margin-right: 10px; /* Add some spacing between the boxes */
+    font-size: 90px;
+
+    justify-content: center; /* Center content horizontally */
+    align-items: center;
+}
+
+
   
   
