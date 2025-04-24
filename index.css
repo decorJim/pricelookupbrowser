@@ -19,6 +19,7 @@
 
 .search-bar {
     font-size: 50px;
+    width: 800px;
 }
 
 .clear-button {
@@ -34,9 +35,8 @@
 
 #suggestions-container {
     height: 800px;
-    width: 525px;
+    width: 800px;
     overflow-y: scroll;
-    background-color: red;
 }
 
 #suggestions {
@@ -46,10 +46,15 @@
 }
 
 .suggestion-button {
-    width: 525px;
+    width: 800px;
     height: 80px;
     margin: 5px;
     font-size:43px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.suggestion-button:hover {
+    background-color: rgb(205, 203, 203);
 }
 
 .number-shortcut-container {
